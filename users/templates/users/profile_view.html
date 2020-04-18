@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+
+<!--{% include 'nav.html' %}-->
+
+{% block content %}
+<h1 class='pb-4'>{{request.user.username}} Profile</h1>
+<form class="" action="" method="post">{% csrf_token %}
+  {{form.as_p}}
+  <input type="submit" value="Update">
+</form>
+
+{% endblock %}
